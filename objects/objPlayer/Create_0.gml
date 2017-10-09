@@ -14,11 +14,16 @@ spriteHair = sprHairMessyBrown;
 spriteWeapon = sprSpear;
 
 // atack info
-shootRange = 300;
 playerSpeed = 10;
+playerMaxHealth = 500;
+playerHealth =playerMaxHealth;
  
 xMovementPosition = noone; // x position to move to on mouse click
 yMovementPosition = noone; // y position to move to on mouse click
 attackingTarget = noone; // instanceId of enemy to attack
 playerState = playerStates.idle
 playerIdleCounter = 0;
+
+playerPrimaryWeapon = instance_create_layer(x,y,"Instances",Weapon);
+
+shootRange = playerPrimaryWeapon.weaponRange;

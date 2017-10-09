@@ -1,5 +1,7 @@
 /// @description
 w_spd = 4;
+npcMaxHealth = 500;
+npcHealth = npcMaxHealth;
 
 x_frame = 0;
 y_frame = 8;
@@ -17,3 +19,6 @@ moveX = 0;
 moveY = 0;
 
 alarm[1] = 1;
+
+isTargeted = false;
+

@@ -21,4 +21,9 @@ enum playerStates {
 	attack
 }
 
+enum primaryWeapons {
+	pistol,
+	rifle
+}
+
 room_goto(room2);

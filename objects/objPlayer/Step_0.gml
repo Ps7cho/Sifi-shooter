@@ -10,9 +10,13 @@ if mouse_check_button(mb_right){
 	var collisionObj = collision_point(xMovementPosition, yMovementPosition, objSilva,false,true);
 	if collisionObj != noone {
 		attackingTarget = collisionObj;
+		attackingTarget.isTargeted = true;
 		playerState = playerStates.follow;
 	} else {
-		
+		if attackingTarget != noone {
+			attackingTarget.isTargeted = false;
+			attackingTarget = noone;
+		}
 		playerState = playerStates.move;
 	}
 }
@@ -61,8 +65,11 @@ switch playerState {
 	case playerStates.attack:
 		#region Attack
 		var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
-		if distanceToTarget < shootRange {
+		if distanceToTarget <= shootRange {
 			// Attack	
+			if playerPrimaryWeapon.weaponCanFire {
+				fireWeapon(playerPrimaryWeapon, attackingTarget);
+			}
 		} else {
 			// Begin movement toward the enemy again
 			move_towards_point(attackingTarget.x, attackingTarget.y, min(playerSpeed, distanceToTarget));
