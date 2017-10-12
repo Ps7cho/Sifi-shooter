@@ -1,4 +1,4 @@
-/// @description 
+/// @description debug global
 
 if(keyboard_check_pressed(ord("0"))) { global.debug = !global.debug }
 if(keyboard_check_pressed(ord("R"))) { game_restart(); }

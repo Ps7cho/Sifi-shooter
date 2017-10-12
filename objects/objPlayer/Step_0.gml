@@ -1,7 +1,7 @@
 /// @description  movement
 
 
-if mouse_check_button(mb_right){
+if mouse_check_button_pressed(mb_right){
 	playerIdleCounter = 0;
 
 	xMovementPosition = mouse_x;
@@ -22,7 +22,7 @@ if mouse_check_button(mb_right){
 }
 
 
-if mouse_check_button_released(mb_right){
+if mouse_check_button_pressed(mb_right){
 	instance_create_layer(xMovementPosition, yMovementPosition, "Instances", objMouseClick);
 }
 

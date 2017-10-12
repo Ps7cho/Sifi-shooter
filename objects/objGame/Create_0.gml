@@ -1,4 +1,4 @@
-/// @description 
+/// @description room settings, enumerators
 randomize();
 global.debug = true;
 room_set_height(room2, 257000);

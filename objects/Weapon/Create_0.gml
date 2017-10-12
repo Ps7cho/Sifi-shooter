@@ -10,4 +10,8 @@ weaponRounds = weaponClipSize;
 weaponCanFire = true;
 weaponReloadSpeed = 120;
 
+//Shounds
+weaponShootSound = soundLaser1;
+weaponReloadSound = soundReload1;
+
 weaponTitle = "Pistol";
