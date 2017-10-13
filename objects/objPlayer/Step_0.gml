@@ -40,11 +40,13 @@ switch playerState {
 	case playerStates.move:
 		#region Move
 		var distanceToMove = point_distance(x, y, xMovementPosition, yMovementPosition);
-		move_towards_point(xMovementPosition, yMovementPosition, min(playerSpeed, distanceToMove));
+		//move_towards_point(xMovementPosition, yMovementPosition, min(playerSpeed, distanceToMove));
+		var dir = point_direction(x,y,xMovementPosition,yMovementPosition);
+		move_contact_solid(dir,min(playerSpeed, distanceToMove));
 		
 		if distanceToMove == 0 {
 			xMovementPosition = noone;
-			yMovementPosition = noone
+			yMovementPosition = noone;
 			playerState = playerStates.idle;
 		}
 		

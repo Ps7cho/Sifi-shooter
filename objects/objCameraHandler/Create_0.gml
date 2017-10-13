@@ -30,7 +30,7 @@ zoom = floor(display_get_height()/desired_height);
 //Resize and center
 surface_resize(application_surface,desired_width*zoom,desired_height*zoom);
 window_set_size(desired_width*zoom,desired_height*zoom);
-display_set_gui_size(desired_width,desired_height); //Change this if you want a smaller/larger GUI
+//display_set_gui_size(desired_width,desired_height); //Change this if you want a smaller/larger GUI
 
 //Declare globals for easy access
 global.VIEW_W = desired_width;

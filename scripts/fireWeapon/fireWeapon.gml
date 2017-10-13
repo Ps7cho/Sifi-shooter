@@ -11,8 +11,14 @@ if weapon.weaponRounds == 0 {
 	}
 
 if weapon.weaponRounds > 0 {
-
-	target.npcHealth -= weapon.weaponDamage;
+	if (chance(weapon.weaponAccuracy)){
+		target.npcHealth -= weapon.weaponDamage;
+		weapon.alarm[2] = weapon.weaponhitDelay;
+	}else{
+		with (target){
+			instance_create_layer(x-20,y-75,"Instances", objMiss);
+		}			
+	}
 	weapon.weaponCanFire = false;
 	weapon.weaponRounds --;	
 	audio_play_sound(weapon.weaponShootSound, 10, false);
