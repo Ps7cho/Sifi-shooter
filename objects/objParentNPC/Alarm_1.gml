@@ -1,19 +1,17 @@
 /// @description
 
-moveX = 0;
-moveY = 0;
-
 var idle = choose(0,1);
 if (idle == 0){
-	var dir = choose(1,2,3,4)
-	switch (dir){
-		case 1: moveX = -w_spd; break;
-		case 2: moveX =  w_spd; break;
-		case 3: moveY = -w_spd; break;
-		case 4: moveY =  w_spd; break;
-	}
+	dir = random_range(0,360);
+	var tempSpeed = choose(0,1);
+		switch (tempSpeed){
+			case 0: walkSpeed = 400; break;
+			case 1: walkSpeed = 700; break;
+		}
+}else{
+	walkSpeed = 0;
 }
 
 
 
-alarm[1] = random_range(2.5, 4)*room_speed;
+alarm[1] = random_range(1, 3)*room_speed;

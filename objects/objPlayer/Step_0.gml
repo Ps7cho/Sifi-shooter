@@ -1,5 +1,6 @@
 /// @description  movement
 
+var move_speed_this_frame = playerSpeed*global.seconds_passed;
 
 if mouse_check_button_pressed(mb_right){
 	playerIdleCounter = 0;
@@ -7,14 +8,18 @@ if mouse_check_button_pressed(mb_right){
 	xMovementPosition = mouse_x;
 	yMovementPosition = mouse_y;
 	
-	var collisionObj = collision_point(xMovementPosition, yMovementPosition, objSilva,false,true);
+	var collisionObj = collision_point(xMovementPosition, yMovementPosition, objParentNPC,false,true);
 	if collisionObj != noone {
 		attackingTarget = collisionObj;
-		attackingTarget.isTargeted = true;
-		playerState = playerStates.follow;
+		if instance_exists(attackingTarget){
+			attackingTarget.isTargeted = true;
+			playerState = playerStates.follow;
+		}
 	} else {
 		if attackingTarget != noone {
-			attackingTarget.isTargeted = false;
+			if instance_exists(attackingTarget){
+				attackingTarget.isTargeted = false;
+			}
 			attackingTarget = noone;
 		}
 		playerState = playerStates.move;
@@ -40,11 +45,11 @@ switch playerState {
 	case playerStates.move:
 		#region Move
 		var distanceToMove = point_distance(x, y, xMovementPosition, yMovementPosition);
-		//move_towards_point(xMovementPosition, yMovementPosition, min(playerSpeed, distanceToMove));
 		var dir = point_direction(x,y,xMovementPosition,yMovementPosition);
-		move_contact_solid(dir,min(playerSpeed, distanceToMove));
+		moveme(min(move_speed_this_frame, distanceToMove),dir);
 		
-		if distanceToMove == 0 {
+		
+		if distanceToMove == 0 { //this is not scalable 
 			xMovementPosition = noone;
 			yMovementPosition = noone;
 			playerState = playerStates.idle;
@@ -54,28 +59,35 @@ switch playerState {
 		#endregion
 	case playerStates.follow:
 		#region Follow
-		var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
-		if distanceToTarget > shootRange {
-			move_towards_point(attackingTarget.x, attackingTarget.y, min(playerSpeed, distanceToTarget));
-			break;
-		} else {
-			// Stop the player from moving and change to attack
-			move_towards_point(attackingTarget.x, attackingTarget.y, 0);
-			playerState = playerStates.attack;
+		if instance_exists(attackingTarget){
+			var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
+			if distanceToTarget > shootRange {
+				var dir = point_direction(x, y, attackingTarget.x, attackingTarget.y);
+				moveme( min(move_speed_this_frame, distanceToTarget),dir);
+				break;
+			} else {
+				// Stop the player from moving and change to attack
+				var dir = point_direction(x, y, attackingTarget.x, attackingTarget.y);
+				moveme(0,dir);
+				playerState = playerStates.attack;
+			}
 		}
 		#endregion
 	case playerStates.attack:
 		#region Attack
-		var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
-		if distanceToTarget <= shootRange {
-			// Attack	
-			if playerPrimaryWeapon.weaponCanFire {
-				fireWeapon(playerPrimaryWeapon, attackingTarget);
+		if instance_exists(attackingTarget){
+			var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
+			if distanceToTarget <= shootRange {
+				// Attack	
+				if playerPrimaryWeapon.weaponCanFire {
+					fireWeapon(playerPrimaryWeapon, attackingTarget);
+				}
+			} else {
+				// Begin movement toward the enemy again
+				var dir = point_direction(x, y, attackingTarget.x, attackingTarget.y);
+				moveme( min(move_speed_this_frame, distanceToTarget),dir);
+				playerState = playerStates.follow;
 			}
-		} else {
-			// Begin movement toward the enemy again
-			move_towards_point(attackingTarget.x, attackingTarget.y, min(playerSpeed, distanceToTarget));
-			playerState = playerStates.follow;
 		}
 		
 		break;

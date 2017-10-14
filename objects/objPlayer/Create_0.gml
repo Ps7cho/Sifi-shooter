@@ -14,7 +14,7 @@ spriteHair = sprHairMessyBrown;
 spriteWeapon = sprSpear;
 
 // atack info
-playerSpeed = 10;
+playerSpeed = 600;
 playerMaxHealth = 500;
 playerHealth =playerMaxHealth;
  

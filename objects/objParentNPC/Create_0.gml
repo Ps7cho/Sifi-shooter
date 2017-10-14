@@ -1,5 +1,6 @@
 /// @description
-w_spd = 4;
+walkSpeed = 400;
+dir = 0;
 npcMaxHealth = 500;
 npcHealth = npcMaxHealth;
 
