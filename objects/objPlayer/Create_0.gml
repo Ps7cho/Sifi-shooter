@@ -27,3 +27,4 @@ playerIdleCounter = 0;
 playerPrimaryWeapon = instance_create_layer(x,y,"Instances",Weapon);
 
 shootRange = playerPrimaryWeapon.weaponRange;
+

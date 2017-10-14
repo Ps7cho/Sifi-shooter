@@ -4,7 +4,7 @@ weaponType = primaryWeapons.rifle;
 weaponAccuracy = 0.70;
 weaponDamage = 30;
 weaponRange = 300;
-weaponFireRate = 20; //frames
+weaponFireRate = 10; //frames
 weaponClipSize = 16;
 weaponRounds = weaponClipSize;
 weaponCanFire = true;
@@ -14,7 +14,7 @@ weaponReloadSpeed = 120;
 weaponShootSound = soundLaser1;
 weaponReloadSound = soundReload1;
 weaponHitSound = soundHit;
-weaponhitDelay = 16;
+weaponhitDelay = 5;
 
 weaponTitle = "Rifle";
 

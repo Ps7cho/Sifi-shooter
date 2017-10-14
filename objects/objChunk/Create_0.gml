@@ -19,9 +19,17 @@ for(var i = 0; i < numSizeBlocks; i++) {
 		}else if zz == 101{
 			var wall = instance_create_layer(x + i*blockSize, y + j*blockSize,"Instances",objWall);
 		}
+		if zz > 60 {
+			if chance(.05) {
+				instanceID = instance_create_layer((x + i*blockSize)+32, (y + j*blockSize)+32,"Player", objSilva);
+				objSilva.instanceID = instanceID;	
+			}
+		}
 	}
 }
 
+instance_activate_region(x, y, chunkSize, chunkSize, true);
+/*
 mp_grid_add_instances(global.grid, objWater, true);
 mp_grid_add_instances(global.grid, objRock, true);
 mp_grid_add_instances(global.grid, objTree, true);
