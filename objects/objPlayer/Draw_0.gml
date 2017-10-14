@@ -7,14 +7,20 @@ var animSpeed = 15;
 var xx = x-x_offset;
 var yy = y-y_offset;
 
+
 // direction for the sprite
 var dirX = (xMovementPosition - x);
 var dirY = (yMovementPosition - y);
+ if dirX > 0 {
+	var frame = 1;
+ }else{
+	var frame = 0;
+ }
+draw_sprite_ext(sprite22,frame,x,y,1,1,0,-1,1);
 
-if (distance_to_point(xMovementPosition, yMovementPosition) < 1) {
-x_frame = 0;
-}
 
+
+/*
 if (dirX < 0) and (dirY > 0){
 	var newx = (dirX*-1)
 	if newx > dirY{
@@ -69,7 +75,7 @@ draw_sprite_part(spriteWeapon, 0, floor(x_frame)*frameSize ,y_frame*frameSize, f
 //Animate frame
 if(x_frame < animLenght -1) { x_frame += animSpeed/60; }
 else							 { x_frame = 1;  }
-
+*/
 if global.debug {
 	draw_rectangle_color(bbox_left,bbox_top,bbox_right,bbox_bottom, c_yellow,c_yellow,c_yellow,c_yellow,true);
 	//draw_circle_color(x,y,shootRange/2,c_red,c_red,true);

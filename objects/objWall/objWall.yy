@@ -5,13 +5,13 @@
     "name": "objWall",
     "eventList": [
         {
-            "id": "f623c451-1429-4f83-8ded-18d9586c3298",
+            "id": "4911a838-4f2e-42d9-86b6-c62aa7673ca8",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
-            "collisionObjectId": "e7790e7a-3013-4e72-881e-277dffe72170",
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 4,
+            "eventtype": 3,
             "m_owner": "bfab9d78-e87b-4a30-b60d-fc8c2a4b57b8"
         }
     ],
