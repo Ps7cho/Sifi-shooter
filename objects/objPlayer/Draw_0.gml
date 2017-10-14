@@ -16,7 +16,10 @@ var dirY = (yMovementPosition - y);
  }else{
 	var frame = 0;
  }
-draw_sprite_ext(sprite22,frame,x,y,1,1,0,-1,1);
+draw_sprite_ext(spritePlayerModel1,frame,x,y,.55,.55,0,-1,1);
+
+//draw chatacter shadow
+draw_sprite_ext(spritePlayerModel1,frame,x,y,-.55,.3,120,c_black,.5)
 
 
 
@@ -102,5 +105,5 @@ switch(playerState) {
 }
 
 //HealthBar 
-draw_healthbar(x-28,y-75, x+18, y-64, (playerHealth/playerMaxHealth)*100, c_black, c_red, c_green, 0, true, false,);
+draw_healthbar(x-28,y-75, x+18, y-64, (Health/playerMaxHealth)*100, c_black, c_red, c_green, 0, true, false,);
 

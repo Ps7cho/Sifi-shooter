@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "138f3082-5c20-4569-aae9-34cbcb05bdfa",
+            "Value": {
+                "id": "eb6bfc3f-6520-4fda-900c-efa89ce4444e",
+                "resourcePath": "objects\\objRifle\\objRifle.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "19bfad20-9fc6-4fa1-862c-c0b470851d05",
             "Value": {
                 "id": "e2f2aa51-3fbd-41c1-809e-e07181ad1846",
@@ -228,6 +236,14 @@
                 "id": "72a4afb8-0f71-4a56-a408-1b9116db9ab0",
                 "resourcePath": "sprites\/sprRock\/sprRock.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "4aa1aa25-cea4-40a8-b325-3341e6235d5d",
+            "Value": {
+                "id": "4819d95f-935c-4aa2-8643-912ca04268ad",
+                "resourcePath": "objects\\objPistol\\objPistol.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -543,6 +559,14 @@
             }
         },
         {
+            "Key": "c21da661-cb29-47be-898d-c2d4d087417e",
+            "Value": {
+                "id": "9fe748b7-422a-4748-a083-fb94ff83c3ca",
+                "resourcePath": "sprites\\spritePlayerModel2\\spritePlayerModel2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "c3108fc0-d926-4e64-a0d2-dd53f2fd5ea2",
             "Value": {
                 "id": "b435db7e-28ba-4e83-8035-9d41131f8e3e",
@@ -711,6 +735,14 @@
             }
         },
         {
+            "Key": "eba909a6-cc29-43a5-8cb1-4fb2aaa41e7f",
+            "Value": {
+                "id": "52f025db-bc47-4929-8ee2-51f76ed5a4f5",
+                "resourcePath": "sprites\\spritePlayerModel1\\spritePlayerModel1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ef7e02e2-a726-450f-87b8-66822ceb8c58",
             "Value": {
                 "id": "ba0ebd9c-c653-4607-91ab-61cbbadff4f5",
@@ -748,6 +780,14 @@
                 "id": "9f1e36ea-547e-46b9-9560-ce2d141137d0",
                 "resourcePath": "views\/f6263afe-c474-4f5b-8763-ea06afb72b69.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "f6619a45-fefe-4b19-b81c-6b5a38780522",
+            "Value": {
+                "id": "66f06455-f271-4f98-a8e5-c84fc6d6c32c",
+                "resourcePath": "objects\\objArmor\\objArmor.yy",
+                "resourceType": "GMObject"
             }
         },
         {

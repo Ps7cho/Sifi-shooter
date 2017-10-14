@@ -2,7 +2,7 @@
 walkSpeed = 400;
 dir = 0;
 npcMaxHealth = 500;
-npcHealth = npcMaxHealth;
+Health = npcMaxHealth;
 
 x_frame = 0;
 y_frame = 8;
@@ -21,5 +21,7 @@ moveY = 0;
 
 alarm[1] = 1;
 
+primaryWeapon = objPistol;
+shootRange = primaryWeapon.weaponRange;
 isTargeted = false;
-
+attackingTarget = noone;

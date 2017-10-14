@@ -13,6 +13,7 @@ if mouse_check_button_pressed(mb_right){
 		attackingTarget = collisionObj;
 		if instance_exists(attackingTarget){
 			attackingTarget.isTargeted = true;
+			attackingTarget.attackingTarget = id;
 			playerState = playerStates.follow;
 		}
 	} else {

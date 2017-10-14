@@ -12,7 +12,7 @@ if weapon.weaponRounds == 0 {
 
 if weapon.weaponRounds > 0 {
 	if (chance(weapon.weaponAccuracy)){
-		target.npcHealth -= weapon.weaponDamage;
+		target.Health -= weapon.weaponDamage;
 		weapon.alarm[2] = weapon.weaponhitDelay;
 	}else{
 		with (target){
