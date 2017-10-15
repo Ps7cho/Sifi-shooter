@@ -3,7 +3,7 @@ x = room_width/2;
 y = room_height/2;
 
 //partical system
-partSystem = part_system_create();
+global.partSystem = part_system_create();
 
 //partical
 partical = part_type_create();

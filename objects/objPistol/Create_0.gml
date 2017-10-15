@@ -1,4 +1,5 @@
 /// @description
+event_inherited();
 
 weaponType = primaryWeapons.pistol;
 weaponAccuracy = 0.85;
