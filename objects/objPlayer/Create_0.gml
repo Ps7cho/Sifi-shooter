@@ -11,11 +11,16 @@ y_offset = sprite_get_yoffset(mask_index);
 playerSpeed = 600;
 playerMaxHealth = 500;
 Health =playerMaxHealth;
- 
+
 //Weapon Info
-playerPrimaryWeapon = instance_create_layer(x,y,"Instances",objRifle);
+playerWeaponList = ds_list_create();
+ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objRifle));
+ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objPistol));
+
+playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
+
 shootRange = playerPrimaryWeapon.weaponRange;
- 
+
 //Armor Info
 
 
@@ -28,6 +33,3 @@ attackingTarget = noone; // instanceId of enemy to attack
 //Player States
 playerState = playerStates.idle
 playerIdleCounter = 0;
-
-
-
