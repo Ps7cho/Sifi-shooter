@@ -22,7 +22,7 @@ playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
 shootRange = playerPrimaryWeapon.weaponRange;
 
 //Armor Info
-armorTeir = 0;
+armorTier = 0;
 armorValue = 0;
 
 

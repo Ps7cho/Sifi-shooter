@@ -12,8 +12,8 @@ if weapon.weaponRounds == 0 { //reload
 
 if weapon.weaponRounds > 0 {
 	if (chance(weapon.weaponAccuracy)){//hit target
-		var damageDelt = (weapon.weaponDamage- (weapon.weaponDamage*(target.armorValue/1000)));
-		target.Health -= damageDelt
+			var damageDelt = (weapon.weaponDamage- (weapon.weaponDamage*(target.armorValue/1000)));
+			target.Health -= damageDelt
 		weapon.alarm[2] = weapon.weaponhitDelay;
 		draw_set_colour(c_red);
 		draw_text(target.x,target.y+80,damageDelt);

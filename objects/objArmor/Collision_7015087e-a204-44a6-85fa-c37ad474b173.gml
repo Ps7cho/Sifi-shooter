@@ -1,7 +1,7 @@
 /// @description Insert description here
 
 
-other.armorTeir = armorTeir;
+other.armorTier = armorTier;
 other.armorValue = armorValue;
 
 instance_destroy();

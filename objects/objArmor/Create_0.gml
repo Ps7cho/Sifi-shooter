@@ -5,17 +5,17 @@
 var loot = random_range(0,100);
 	
 if loot <= 70 {
-	armorTeir = 1;	//70%
+	armorTier = 1;	//70%
 }else if loot <= 90 {
-	armorTeir = 2;	//20%
+	armorTier = 2;	//20%
 }else if loot <= 97 {
-	armorTeir = 3;	//7%
+	armorTier = 3;	//7%
 }else if loot <= 100 {
-	armorTeir = 4;	//3%
+	armorTier = 4;	//3%
 }
 
 
-switch (armorTeir){
+switch (armorTier){
 	case 1: 
 	armorValue = 100; break;//100% increase
 	case 2: 
