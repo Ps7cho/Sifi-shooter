@@ -13,7 +13,7 @@ room_set_viewport(room2, 0, true, 0, 0, 640, 480);
 room_set_view_enabled(room2, true);
 */
 
-global.partSystem = part_system_create();
+global.partSystem = part_system_create_layer("Particals", true);
 
 players = [];
 

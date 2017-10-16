@@ -12,10 +12,11 @@ if weapon.weaponRounds == 0 { //reload
 
 if weapon.weaponRounds > 0 {
 	if (chance(weapon.weaponAccuracy)){//hit target
-		target.Health -= weapon.weaponDamage;
+		var damageDelt = (weapon.weaponDamage- (weapon.weaponDamage*(target.armorValue/1000)));
+		target.Health -= damageDelt
 		weapon.alarm[2] = weapon.weaponhitDelay;
 		draw_set_colour(c_red);
-		draw_text(60,60,string(weapon.weaponDamage));
+		draw_text(target.x,target.y+80,damageDelt);
 	}else{
 		//miss target
 		instance_create_layer(target.x-20,target.y-75,"Instances", objMiss);

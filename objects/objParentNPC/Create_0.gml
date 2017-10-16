@@ -25,3 +25,5 @@ primaryWeapon = objPistol;
 shootRange = primaryWeapon.weaponRange;
 isTargeted = false;
 attackingTarget = noone;
+
+armorValue = 0;

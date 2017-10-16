@@ -1,6 +1,6 @@
 /// @description
 
-if chance(100){
+if chance(100){//5 is default
 	var loot = random_range(0,100);
 	
 	if loot <= 50 {

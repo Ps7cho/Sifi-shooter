@@ -3,7 +3,7 @@ event_inherited();
 
 weaponType = primaryWeapons.rifle;
 weaponAccuracy = 0.80;
-weaponDamage = 30;
+weaponDamage = 80;
 weaponRange = 300;
 weaponFireRate = 10; //frames
 weaponClipSize = 16;

@@ -1,5 +1,5 @@
 /// @description draw to gui
-
+draw_set_color(c_red);
 draw_text(35, 50, "Weapon:" +string(playerPrimaryWeapon.weaponTitle));
 draw_text(35, 65, "Ammo:" +string(playerPrimaryWeapon.weaponRounds) +
 " / " + string(playerPrimaryWeapon.weaponClipSize));
