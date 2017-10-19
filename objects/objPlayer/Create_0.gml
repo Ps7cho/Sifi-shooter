@@ -14,8 +14,10 @@ Health =playerMaxHealth;
 
 //Weapon Info
 playerWeaponList = ds_list_create();
+playerWeaponButtonList = ds_list_create();
+
 ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objRifle));
-//ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objPistol));
+ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objPistol));
 
 playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
 
@@ -36,6 +38,7 @@ playerState = playerStates.idle
 playerIdleCounter = 0;
 
 
+// Add Weapon Buttons to list
 var displayHeight = window_get_height();
 var displayWidth = window_get_width();
 
@@ -43,9 +46,9 @@ var numberOfWeaponButtons = ds_list_size(playerWeaponList);
 var startXButtonPosition = (displayWidth / 2) - (64 * numberOfWeaponButtons);
 for (var i = 0; i < numberOfWeaponButtons; i++) {
     var button = instance_create_layer((startXButtonPosition + 128 * i), displayHeight -  100, "Instances", objButtons);
-    button.buttonPlayerReference = self;
     button.buttonText = ds_list_find_value(playerWeaponList, i).weaponTitle;
-    button.buttonWeaponIndex = i;
+	button.playerReference = self;
+	button.playerWeaponIndex = i;
     // Debug
     //draw_text((startXButtonPosition + 128 * i), displayHeight -  100, "Weapon:" +string(ds_list_find_value(playerWeaponList, i).weaponTitle));
 }

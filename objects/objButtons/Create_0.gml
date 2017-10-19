@@ -1,5 +1,3 @@
-
-
 buttonText = "";
-buttonWeaponIndex = -1;
-buttonPlayerReference = noone;
+playerWeaponIndex = -1;
+playerReference = noone;
