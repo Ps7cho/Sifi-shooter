@@ -12,9 +12,5 @@ if chance(100){//5 is default
 	}else if loot <= 100 {
 		instance_create_layer(x,y,"Instances",objRifle);	exit;
 	}
-		
-		
-		
-		
 
 }

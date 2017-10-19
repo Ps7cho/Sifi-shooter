@@ -1,3 +1,5 @@
+/// @description movement
+
 /// @description
 
 var idle = choose(0,1);
@@ -14,4 +16,4 @@ if (idle == 0){
 
 
 
-alarm[1] = random_range(1, 2)*room_speed;
+alarm[1] = random_range(1, 3)*room_speed;

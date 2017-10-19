@@ -20,9 +20,10 @@ for(var i = 0; i < numSizeBlocks; i++) {
 			var wall = instance_create_layer(x + i*blockSize, y + j*blockSize,"Instances",objWall);
 		}
 		if zz > 60 {
-			if chance(.05) {
-				instanceID = instance_create_layer((x + i*blockSize)+32, (y + j*blockSize)+32,"Player", objSilva);
-				objSilva.instanceID = instanceID;	
+			if chance(.01) {
+				//instanceID = instance_create_layer((x + i*blockSize)+32, (y + j*blockSize)+32,"Player", objSilva);
+				//objSilva.instanceID = instanceID;	
+				instance_create_layer((x + i*blockSize)+32, (y + j*blockSize)+32,"Player", objBubbleLeader);
 			}
 		}
 	}

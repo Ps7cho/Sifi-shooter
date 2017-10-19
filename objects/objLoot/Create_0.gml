@@ -6,8 +6,8 @@
 
 
 
-
-
+DespawnTimer = 60*room_speed;
+alarm[5] = DespawnTimer;
 
 
 

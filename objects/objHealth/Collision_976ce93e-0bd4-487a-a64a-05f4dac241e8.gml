@@ -1,6 +1,6 @@
 /// @description Insert description here
 
 
-other.Health += 50;	
+other.Health += 80;	
 
 instance_destroy();
