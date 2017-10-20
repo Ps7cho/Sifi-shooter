@@ -21,7 +21,7 @@ moveY = 0;
 
 alarm[1] = 1;
 
-primaryWeapon = objPistol;
+primaryWeapon = instance_create_layer(x,y,"Instances",objPistol);
 shootRange = primaryWeapon.weaponRange;
 isTargeted = false;
 attackingTarget = noone;
