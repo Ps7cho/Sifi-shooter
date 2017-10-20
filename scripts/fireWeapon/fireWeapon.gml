@@ -15,8 +15,10 @@ if weapon.weaponRounds > 0 {
 			var damageDelt = (weapon.weaponDamage- (weapon.weaponDamage*(target.armorValue/1000)));
 			target.Health -= damageDelt
 		weapon.alarm[2] = weapon.weaponhitDelay;
-		draw_set_colour(c_red);
-		draw_text(target.x,target.y+80,damageDelt);
+		//draw_set_colour(c_red);
+		//draw_text(target.x,target.y+80,damageDelt);
+		var damageObject = instance_create_layer(target.x - 20, target.y - 75, "Instances", objDamageDealt);
+		damageObject.damageText = damageDelt;
 	}else{
 		//miss target
 		instance_create_layer(target.x-20,target.y-75,"Instances", objMiss);
