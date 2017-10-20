@@ -10,11 +10,14 @@ if mouse_check_button_pressed(mb_right){
 	
 	var collisionObj = collision_point(xMovementPosition, yMovementPosition, objParentNPC,false,true);
 	if collisionObj != noone {
+
+		// If previously attacking another npc, untarget that player
 		if instance_exists(attackingTarget) {
 			attackingTarget.isTargeted = false;	
 			attackingTarget.attackingTarget = noone;
 		}
 		
+		// Set attacking target to attack the player
 		attackingTarget = collisionObj;
 		if instance_exists(attackingTarget){
 			attackingTarget.isTargeted = true;
@@ -22,6 +25,7 @@ if mouse_check_button_pressed(mb_right){
 			playerState = playerStates.follow;
 		}
 	} else {
+		// If previously attacking another npc, untarget that player
 		if attackingTarget != noone {
 			if instance_exists(attackingTarget){
 				attackingTarget.isTargeted = false;
@@ -100,23 +104,4 @@ switch playerState {
 		break;
 		#endregion
 }
-
-/*
-if targetY != noone && targetY != noone {
-	attackingTarget = collision_point(targetX, targetY, objSilva,false,true)
-	if attackingTarget != noone{
-		draw_line_color(x,y,attackingTarget.x,attackingTarget.y,c_white,c_red);
-		var mouseDistance = point_distance(x, y, attackingTarget.x, attackingTarget.y);
-		move_towards_point(attackingTarget.x, attackingTarget.y, min(playerSpeed, mouseDistance));
-		
-	}else{
-	attackingTarget = noone;
-		var mouseDistance = point_distance(x, y, targetX, targetY);
-		move_towards_point(targetX, targetY, min(playerSpeed, mouseDistance));
-		//if (mp_grid_path(global.grid, path, x, y, targetX, targetY, true)){
-		//	path_start(path, playerSpeed, path_action_stop, false);
-		//}
-	}
-}
-*/
 

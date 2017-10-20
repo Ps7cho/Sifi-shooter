@@ -14,6 +14,9 @@ if (instance_exists(objPlayer)){
 var move_speed_this_frame = walkSpeed*global.seconds_passed;
 
 if isTargeted {
+	/* 
+	The npc is being targeted by the player, so attack the player.
+	*/
 	if instance_exists(attackingTarget){
 		var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
 		if distanceToTarget > shootRange {
@@ -28,7 +31,12 @@ if isTargeted {
 	}else{
 		attackingTarget = noone;	
 	}
-}else if instance_exists(attackingTarget){
+} else if instance_exists(attackingTarget) {
+	/* 
+	If an npc is part of a tribe it would have the ability to target a player if its leader
+	became targeted without the npc being targeted.  Thus this block of code runs similar as
+	though the npc was targeted directly.
+	*/
 	var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
 	if distanceToTarget > shootRange {
 		var direct = point_direction(x, y, attackingTarget.x, attackingTarget.y);
@@ -40,6 +48,9 @@ if isTargeted {
 		}
 	}
 }else{
+	/* 
+	Move the npc.  It is not being targeted or attacking a player
+	*/
 	attackingTarget = noone;
 	moveme(move_speed_this_frame,dir);
 }
