@@ -12,4 +12,6 @@ if mouse_check_button_pressed(mb_left){
 
 
 draw_self();
+draw_set_color(c_aqua);
 draw_text(x + 10, y + 10, buttonText);
+draw_rectangle_color(bbox_left,bbox_top,bbox_right,bbox_bottom, c_aqua,c_black,c_teal,c_black,true);
