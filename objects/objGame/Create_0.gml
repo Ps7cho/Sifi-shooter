@@ -1,7 +1,7 @@
 /// @description room settings, enumerators
 randomize();
 
-global.debug = true;
+global.debug = false;
 
 room_set_height(room2, 257000);
 room_set_width(room2, 257000);
