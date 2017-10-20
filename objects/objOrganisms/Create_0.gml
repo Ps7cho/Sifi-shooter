@@ -4,6 +4,7 @@
 // atack info
 playerSpeed = 600;
 playerMaxHealth = 500;
+Health = playerMaxHealth;
 
 
 //Armor Info
