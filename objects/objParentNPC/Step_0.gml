@@ -28,6 +28,18 @@ if isTargeted {
 	}else{
 		attackingTarget = noone;	
 	}
+}else if instance_exists(attackingTarget){
+	var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
+	if distanceToTarget > shootRange {
+		var direct = point_direction(x, y, attackingTarget.x, attackingTarget.y);
+		moveme( min(move_speed_this_frame, distanceToTarget),direct);
+	}else{
+		moveme(0,dir);
+		if primaryWeapon.weaponCanFire{
+			fireWeapon(primaryWeapon, attackingTarget);
+		}
+	}
 }else{
+	attackingTarget = noone;
 	moveme(move_speed_this_frame,dir);
 }

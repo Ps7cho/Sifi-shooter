@@ -1,7 +1,7 @@
 /// @description
 
 if tribeMissing > 0{
-	bubble = instance_create_layer(x,y,"Player",objBubble);
+	var bubble = instance_create_layer(x,y,"Player",objBubble);
 	bubble.tribe = id;
 	tribeMissing--;
 }

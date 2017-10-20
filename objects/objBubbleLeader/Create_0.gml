@@ -8,6 +8,7 @@ tribeMissing = 0;
 
 tribeSize = random_range(2,4);
 for (var i = 0; i < tribeSize; i++){
-	bubble = instance_create_layer(x,y,"Player",objBubble);
+	var bubble = instance_create_layer(x,y,"Player",objBubble);
 	bubble.tribe = id;
 }
+

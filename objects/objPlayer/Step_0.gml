@@ -10,6 +10,11 @@ if mouse_check_button_pressed(mb_right){
 	
 	var collisionObj = collision_point(xMovementPosition, yMovementPosition, objParentNPC,false,true);
 	if collisionObj != noone {
+		if instance_exists(attackingTarget) {
+			attackingTarget.isTargeted = false;	
+			attackingTarget.attackingTarget = noone;
+		}
+		
 		attackingTarget = collisionObj;
 		if instance_exists(attackingTarget){
 			attackingTarget.isTargeted = true;
@@ -20,6 +25,7 @@ if mouse_check_button_pressed(mb_right){
 		if attackingTarget != noone {
 			if instance_exists(attackingTarget){
 				attackingTarget.isTargeted = false;
+				attackingTarget.attackingTarget = noone;
 			}
 			attackingTarget = noone;
 		}
