@@ -39,16 +39,11 @@ playerIdleCounter = 0;
 
 
 // Add Weapon Buttons to list
-var displayHeight = window_get_height();
-var displayWidth = window_get_width();
-
-var numberOfWeaponButtons = ds_list_size(playerWeaponList);
-var startXButtonPosition = (displayWidth / 2) - (64 * numberOfWeaponButtons);
-for (var i = 0; i < numberOfWeaponButtons; i++) {
-    var button = instance_create_layer((startXButtonPosition + 128 * i), displayHeight -  100, "Instances", objButtons);
+var weaponButtonListSize = ds_list_size(playerWeaponList);
+var startXButtonPosition = (window_get_width() / 2) - (64 * weaponButtonListSize) - (20 * (weaponButtonListSize - 1));
+for (var i = 0; i < weaponButtonListSize; i++) {
+    var button = instance_create_layer((startXButtonPosition + (128 + 40) * i), window_get_height() -  100, "Instances", objButtons);
     button.buttonText = ds_list_find_value(playerWeaponList, i).weaponTitle;
 	button.playerReference = self;
 	button.playerWeaponIndex = i;
-    // Debug
-    //draw_text((startXButtonPosition + 128 * i), displayHeight -  100, "Weapon:" +string(ds_list_find_value(playerWeaponList, i).weaponTitle));
 }
