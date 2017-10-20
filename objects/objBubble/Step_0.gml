@@ -15,4 +15,9 @@ if instance_exists(tribe){
 	}
 }
 
+// Check if Tribe Leader is dead
+if !instance_exists(tribe) {
+	attackingTarget = noone;
+}
+
 
