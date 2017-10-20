@@ -9,6 +9,6 @@ if global.debug {
 }
 
 //HealthBar 
-draw_healthbar(x-28,y-75, x+18, y-64, (Health/npcMaxHealth)*100, c_black, c_red, c_green, 0, true, false,);
+draw_healthbar(x-28,y-75, x+18, y-64, (Health/playerMaxHealth)*100, c_black, c_red, c_green, 0, true, false,);
 
 draw_sprite_ext(sprTarget,isTargeted,xx,yy,1,1,0,image_blend,0.7);

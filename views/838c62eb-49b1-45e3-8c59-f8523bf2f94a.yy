@@ -9,7 +9,8 @@
         "138f3082-5c20-4569-aae9-34cbcb05bdfa",
         "f6619a45-fefe-4b19-b81c-6b5a38780522",
         "d1967734-f866-40c0-a0f6-2150e92ce43b",
-        "e0e44244-2aab-430b-b47a-4b58a229e37f"
+        "e0e44244-2aab-430b-b47a-4b58a229e37f",
+        "1064668d-adff-41dd-9d17-d6e3983dac18"
     ],
     "filterType": "GMObject",
     "folderName": "Loot",

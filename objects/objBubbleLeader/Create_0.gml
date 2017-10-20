@@ -1,7 +1,6 @@
 /// @description Insert description here
 event_inherited();
 npcMaxHealth = 3000;
-Health = npcMaxHealth;
 
 alarm[2] = 1;
 tribeMissing = 0;

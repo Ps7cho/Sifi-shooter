@@ -1,16 +1,9 @@
 /// @description
-
-x_frame = 0;
-y_frame = 8;
+event_inherited();
 
 x_offset = sprite_get_xoffset(mask_index);
 y_offset = sprite_get_yoffset(mask_index);
 
-
-// atack info
-playerSpeed = 600;
-playerMaxHealth = 500;
-Health =playerMaxHealth;
 
 //Weapon Info
 playerWeaponList = ds_list_create();
@@ -23,9 +16,6 @@ playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
 
 shootRange = playerPrimaryWeapon.weaponRange;
 
-//Armor Info
-armorTier = 0;
-armorValue = 0;
 
 
 //Movement/Targeting 

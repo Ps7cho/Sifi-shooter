@@ -10,8 +10,8 @@
         "725b6b27-f33e-4fe0-b369-1cc7fc166091",
         "bfab9d78-e87b-4a30-b60d-fc8c2a4b57b8",
         "b6aadc04-dda0-43d7-aecd-938da1a678ae",
-        "2ceccf26-8602-429f-9b1e-186f8572e623",
-        "e4d0afa2-ee3a-49c6-87fa-d4db11423a68"
+        "e4d0afa2-ee3a-49c6-87fa-d4db11423a68",
+        "4f9d1f73-93c1-4494-b978-c20a3a4eabe7"
     ],
     "filterType": "GMObject",
     "folderName": "Decor",
