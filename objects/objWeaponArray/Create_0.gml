@@ -54,7 +54,7 @@ var baseRifle = ds_map_create();
 ds_map_add(baseRifle, global.WEAPON_TYPE_KEY, primaryWeapons.rifle);
 ds_map_add(baseRifle, global.WEAPON_TIER_KEY, WeaponTiers.common);
 ds_map_add(baseRifle, global.WEAPON_ACCURACY_KEY, 0.85);
-ds_map_add(baseRifle, global.WEAPON_DAMAGE_KEY, 30);
+ds_map_add(baseRifle, global.WEAPON_DAMAGE_KEY, 100);
 ds_map_add(baseRifle, global.WEAPON_RANGE_KEY, 300);
 ds_map_add(baseRifle, global.WEAPON_FIRE_RATE_KEY, 60);
 ds_map_add(baseRifle, global.WEAPON_CLIP_SIZE_KEY, 12);
@@ -67,6 +67,65 @@ ds_map_add(baseRifle, global.WEAPON_HIT_DELAY_KEY, 20);
 
 
 // Add weapon templates to global weapon list
+global.weaponList = ds_map_create()
+ds_map_add(global.weaponList, primaryWeapons.pistol, basePistol);
+ds_map_add(global.weaponList, primaryWeapons.rifle, baseRifle);
+
+
+
+
+// Common Tier
+var commonIncreasePercentages = ds_map_create();
+ds_map_add(commonIncreasePercentages, global.WEAPON_DAMAGE_KEY, 10);
+ds_map_add(commonIncreasePercentages, global.WEAPON_FIRE_RATE_KEY, 5);
+ds_map_add(commonIncreasePercentages, global.WEAPON_RELOAD_SPEED_KEY, 5);
+
+// Uncommon Tier
+var uncommonIncreasePercentages = ds_map_create();
+ds_map_add(uncommonIncreasePercentages, global.WEAPON_DAMAGE_KEY, 10);
+ds_map_add(uncommonIncreasePercentages, global.WEAPON_FIRE_RATE_KEY, 5);
+ds_map_add(uncommonIncreasePercentages, global.WEAPON_RELOAD_SPEED_KEY, 5);
+
+// Rare Tier
+var rareIncreasePercentages = ds_map_create();
+ds_map_add(rareIncreasePercentages, global.WEAPON_DAMAGE_KEY, 20);
+ds_map_add(rareIncreasePercentages, global.WEAPON_FIRE_RATE_KEY, 10);
+ds_map_add(rareIncreasePercentages, global.WEAPON_RELOAD_SPEED_KEY, 10);
+
+// Legendary Tier
+var legendaryIncreasePercentages = ds_map_create();
+ds_map_add(legendaryIncreasePercentages, global.WEAPON_DAMAGE_KEY, 30);
+ds_map_add(legendaryIncreasePercentages, global.WEAPON_FIRE_RATE_KEY, 10);
+ds_map_add(legendaryIncreasePercentages, global.WEAPON_RELOAD_SPEED_KEY, 10);
+
+// Epic Tier
+var epicIncreasePercentages = ds_map_create();
+ds_map_add(epicIncreasePercentages, global.WEAPON_DAMAGE_KEY, 40);
+ds_map_add(epicIncreasePercentages, global.WEAPON_FIRE_RATE_KEY, 10);
+ds_map_add(epicIncreasePercentages, global.WEAPON_RELOAD_SPEED_KEY, 10);
+
+
+global.weaponTierIncreasePercentagesMap = ds_map_create();
+ds_map_add(global.weaponTierIncreasePercentagesMap, WeaponTiers.common, commonIncreasePercentages);
+ds_map_add(global.weaponTierIncreasePercentagesMap, WeaponTiers.uncommon, uncommonIncreasePercentages);
+ds_map_add(global.weaponTierIncreasePercentagesMap, WeaponTiers.rare, rareIncreasePercentages);
+ds_map_add(global.weaponTierIncreasePercentagesMap, WeaponTiers.legandary, legendaryIncreasePercentages);
+ds_map_add(global.weaponTierIncreasePercentagesMap, WeaponTiers.epic, epicIncreasePercentages);
+
+
+global.weaponTierIncreasePercentagesList = ds_list_create();
+ds_list_add(global.weaponTierIncreasePercentagesList, 
+	commonIncreasePercentages, 
+	uncommonIncreasePercentages, 
+	rareIncreasePercentages,
+	legendaryIncreasePercentages,
+	epicIncreasePercentages
+);
+
+
+
+/*
 global.weaponList = ds_list_create();
 ds_list_add(global.weaponList, basePistol);
 ds_list_add(global.weaponList, baseRifle); 
+*/

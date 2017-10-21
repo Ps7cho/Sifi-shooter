@@ -9,8 +9,8 @@ y_offset = sprite_get_yoffset(mask_index);
 playerWeaponList = ds_list_create();
 playerWeaponButtonList = ds_list_create();
 
-ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objRifle));
-ds_list_add(playerWeaponList, instance_create_layer(x,y,"Instances",objPistol));
+ds_list_add(playerWeaponList, generateWeapon(primaryWeapons.rifle, WeaponTiers.uncommon));
+ds_list_add(playerWeaponList, generateWeapon(primaryWeapons.pistol, WeaponTiers.common));
 
 playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
 
