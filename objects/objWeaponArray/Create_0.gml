@@ -20,25 +20,53 @@ for (i = 0; i <= global.weapons; i++){
     }
 }     
 
-// [0] Pistol
-global.weaponArray[0,0] = primaryWeapons.pistol; //weaponType
-global.weaponArray[0,1] = 0.85; //weaponAccuracy
-global.weaponArray[0,2] = 30; //weaponDamage
-global.weaponArray[0,3] = 300;  //weaponRange
-global.weaponArray[0,4] = 60; //weaponFireRate
-global.weaponArray[0,5] = 12; //weaponClipSize
-global.weaponArray[0,6] = 120; //weaponReloadSpeed   
-global.weaponArray[0,7] = "Pistol";//weaponTitle
-global.weaponArray[0,8] = soundLaser1;//weaponShootSound
-global.weaponArray[0,9] = soundReload1;//weaponReloadSound
-global.weaponArray[0,10] = soundHit;//weaponHitSound
-global.weaponArray[0,11] = 20;//weaponhitDelay
+global.WEAPON_TYPE_KEY = "WEAPON_TYPE_KEY";
+global.WEAPON_TIER_KEY = "WEAPON_TIER_KEY";
+global.WEAPON_ACCURACY_KEY = "WEAPON_ACCURACY_KEY";
+global.WEAPON_DAMAGE_KEY = "WEAPON_DAMAGE_KEY";
+global.WEAPON_RANGE_KEY = "WEAPON_RANGE_KEY";
+global.WEAPON_FIRE_RATE_KEY = "WEAPON_FIRE_RATE_KEY";
+global.WEAPON_CLIP_SIZE_KEY = "WEAPON_CLIP_SIZE_KEY";
+global.WEAPON_RELOAD_SPEED_KEY = "WEAPON_RELOAD_SPEED_KEY";
+global.WEAPON_TITLE_KEY = "WEAPON_TITLE_KEY";
+global.WEAPON_SHOOT_SOUND_KEY = "WEAPON_SHOOT_SOUND_KEY";
+global.WEAPON_RELOAD_SOUND_KEY = "WEAPON_RELOAD_SOUND_KEY";
+global.WEAPON_HIT_SOUND_KEY = "WEAPON_HIT_SOUND_KEY";
+global.WEAPON_HIT_DELAY_KEY = "WEAPON_HIT_DELAY_KEY";
 
-// [1] Rifle
-global.weaponArray[1,0] = "Rifle"; //Name
-global.weaponArray[1,1] = spr_rifle; //sprite index
-global.weaponArray[1,2] = 7; //rate of fire
-global.weaponArray[1,3] = obj_bullet;  //ammo index
-global.weaponArray[1,4] = 30; //magazine size
-global.weaponArray[1,5] = 0; //offset
-global.weaponArray[1,6] = -5; //offset   
+
+var basePistol = ds_map_create();
+ds_map_add(basePistol, global.WEAPON_TYPE_KEY, primaryWeapons.pistol);
+ds_map_add(basePistol, global.WEAPON_TIER_KEY, WeaponTiers.common);
+ds_map_add(basePistol, global.WEAPON_ACCURACY_KEY, 0.85);
+ds_map_add(basePistol, global.WEAPON_DAMAGE_KEY, 30);
+ds_map_add(basePistol, global.WEAPON_RANGE_KEY, 300);
+ds_map_add(basePistol, global.WEAPON_FIRE_RATE_KEY, 60);
+ds_map_add(basePistol, global.WEAPON_CLIP_SIZE_KEY, 12);
+ds_map_add(basePistol, global.WEAPON_RELOAD_SPEED_KEY, 120);
+ds_map_add(basePistol, global.WEAPON_TITLE_KEY, "Pistol");
+ds_map_add(basePistol, global.WEAPON_SHOOT_SOUND_KEY, soundLaser1);
+ds_map_add(basePistol, global.WEAPON_RELOAD_SOUND_KEY, soundReload1);
+ds_map_add(basePistol, global.WEAPON_HIT_SOUND_KEY, soundHit);
+ds_map_add(basePistol, global.WEAPON_HIT_DELAY_KEY, 20);
+
+var baseRifle = ds_map_create();
+ds_map_add(baseRifle, global.WEAPON_TYPE_KEY, primaryWeapons.rifle);
+ds_map_add(basePistol, global.WEAPON_TIER_KEY, WeaponTiers.common);
+ds_map_add(baseRifle, global.WEAPON_ACCURACY_KEY, 0.85);
+ds_map_add(baseRifle, global.WEAPON_DAMAGE_KEY, 30);
+ds_map_add(baseRifle, global.WEAPON_RANGE_KEY, 300);
+ds_map_add(baseRifle, global.WEAPON_FIRE_RATE_KEY, 60);
+ds_map_add(baseRifle, global.WEAPON_CLIP_SIZE_KEY, 12);
+ds_map_add(baseRifle, global.WEAPON_RELOAD_SPEED_KEY, 120);
+ds_map_add(baseRifle, global.WEAPON_TITLE_KEY, "Rifle");
+ds_map_add(baseRifle, global.WEAPON_SHOOT_SOUND_KEY, soundLaser1);
+ds_map_add(baseRifle, global.WEAPON_RELOAD_SOUND_KEY, soundReload1);
+ds_map_add(baseRifle, global.WEAPON_HIT_SOUND_KEY, soundHit);
+ds_map_add(baseRifle, global.WEAPON_HIT_DELAY_KEY, 20);
+
+
+// Add weapon templates to global weapon list
+global.weaponList = ds_list_create();
+ds_list_add(global.weaponList, basePistol);
+ds_list_add(global.weaponList, baseRifle); 
