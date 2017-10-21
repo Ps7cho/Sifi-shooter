@@ -31,3 +31,4 @@ enum primaryWeapons {
 }
 
 room_goto(room2);
+alarm[0] = 1;
