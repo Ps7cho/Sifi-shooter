@@ -52,7 +52,7 @@ ds_map_add(basePistol, global.WEAPON_HIT_DELAY_KEY, 20);
 
 var baseRifle = ds_map_create();
 ds_map_add(baseRifle, global.WEAPON_TYPE_KEY, primaryWeapons.rifle);
-ds_map_add(basePistol, global.WEAPON_TIER_KEY, WeaponTiers.common);
+ds_map_add(baseRifle, global.WEAPON_TIER_KEY, WeaponTiers.common);
 ds_map_add(baseRifle, global.WEAPON_ACCURACY_KEY, 0.85);
 ds_map_add(baseRifle, global.WEAPON_DAMAGE_KEY, 30);
 ds_map_add(baseRifle, global.WEAPON_RANGE_KEY, 300);
