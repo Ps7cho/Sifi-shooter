@@ -104,4 +104,11 @@ switch playerState {
 		break;
 		#endregion
 }
+if keyboard_check_pressed("~"){
+	object_set_solid(id,false);
+	movementSpeed = 3000;
+	if mouse_check_button_pressed(mb_left){
+			
+	}
+}
 
