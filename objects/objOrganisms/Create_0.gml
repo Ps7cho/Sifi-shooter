@@ -2,9 +2,9 @@
 // You can write your code in this editor
 
 // atack info
-playerSpeed = 600;
-playerMaxHealth = 500;
-Health = playerMaxHealth;
+movementSpeed = 600;
+unitMaxHealth = 500;
+Health = unitMaxHealth;
 
 
 //Armor Info

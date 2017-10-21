@@ -1,7 +1,7 @@
 /// @description
 event_inherited();
 
-walkSpeed = 400;
+movementSpeed = 400;
 dir = 0;
 
 x_offset = sprite_get_xoffset(mask_index);
