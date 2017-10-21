@@ -11,7 +11,7 @@ if (instance_exists(objPlayer)){
 }
 
 
-var move_speed_this_frame = walkSpeed*global.seconds_passed;
+var move_speed_this_frame = movementSpeed*global.seconds_passed;
 
 if isTargeted {
 	/* 

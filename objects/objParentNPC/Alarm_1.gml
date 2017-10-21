@@ -5,11 +5,11 @@ if (idle == 0){
 	dir = random_range(0,360);
 	var tempSpeed = choose(0,1);
 		switch (tempSpeed){
-			case 0: walkSpeed = 400; break;
-			case 1: walkSpeed = 700; break;
+			case 0: movementSpeed = 400; break;
+			case 1: movementSpeed = 700; break;
 		}
 }else{
-	walkSpeed = 0;
+	movementSpeed = 0;
 }
 
 

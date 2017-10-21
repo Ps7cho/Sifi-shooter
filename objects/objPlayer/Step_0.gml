@@ -1,6 +1,6 @@
 /// @description  movement
 
-var move_speed_this_frame = playerSpeed*global.seconds_passed;
+var move_speed_this_frame = movementSpeed*global.seconds_passed;
 
 if mouse_check_button_pressed(mb_right){
 	playerIdleCounter = 0;

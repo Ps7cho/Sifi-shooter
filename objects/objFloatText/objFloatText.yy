@@ -2,7 +2,7 @@
     "id": "e4d0afa2-ee3a-49c6-87fa-d4db11423a68",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "objDamageDealt",
+    "name": "objFloatText",
     "eventList": [
         {
             "id": "5020d55e-fec1-484c-abd0-f021641eeec0",
