@@ -30,4 +30,12 @@ enum primaryWeapons {
 	rifle
 }
 
+enum WeaponTiers {
+	common,
+	uncommon,
+	rare,
+	legandary,
+	epic
+}
+
 room_goto(room2);
