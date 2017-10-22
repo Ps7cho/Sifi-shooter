@@ -20,7 +20,7 @@ for (var tierIndex = 0; tierIndex < weaponTier; tierIndex++) {
 	// New base damage
 	var newBaseDamage  = ds_map_find_value(weaponCharacteristics, global.WEAPON_DAMAGE_KEY) 
 		* (1 + (ds_map_find_value(tierMap, global.WEAPON_DAMAGE_KEY) / 100));
-	ds_map_set(weaponCharacteristics, global.WEAPON_DAMAGE_KEY, newBaseDamage);
+	ds_map_set(weaponCharacteristics, global.WEAPON_DAMAGE_KEY, round(newBaseDamage));
 	
 	// Other Characteristics go Here
 	
@@ -30,7 +30,7 @@ for (var tierIndex = 0; tierIndex < weaponTier; tierIndex++) {
 // Roll for a random increase percentage
 var baseDamageIncreasePercentage = 1 + (random_range(0, ds_map_find_value(weaponTierMaxIncreasePercentages, global.WEAPON_DAMAGE_KEY) / 100));
 var newBaseDamage = ds_map_find_value(weaponCharacteristics, global.WEAPON_DAMAGE_KEY) * baseDamageIncreasePercentage;
-ds_map_set(weaponCharacteristics, global.WEAPON_DAMAGE_KEY, newBaseDamage);
+ds_map_set(weaponCharacteristics, global.WEAPON_DAMAGE_KEY, round(newBaseDamage));
 
 // ------------------------------------------------------------
 // USE WITH CURRENT IMPLENTATION / ONLY FOR DEBUG!!!
