@@ -104,11 +104,17 @@ switch playerState {
 		break;
 		#endregion
 }
-if keyboard_check_pressed(ord("`")){
-	object_set_solid(id,false);
+
+
+
+if keyboard_check(ord("1")){
+	object_set_solid(objPlayer,false);
 	movementSpeed = 3000;
 	if mouse_check_button_pressed(mb_left){
-			
+		var wall = instance_create_layer(mouse_x, mouse_y,"Instances",objWall);
 	}
+}else{
+	movementSpeed = 600;	
+	object_set_solid(objPlayer,true);
 }
 

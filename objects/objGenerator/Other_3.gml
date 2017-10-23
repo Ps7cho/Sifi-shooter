@@ -1,5 +1,7 @@
 with(objChunk){
     unloadChunk();
 }
+
+ds_map_secure_save(chunkMap,fileSave);
 ds_map_destroy(chunkMap);
 ds_map_destroy(chunkLoadedSet);

@@ -12,6 +12,11 @@ despawnRadius = 2000;
 
 spawnRadius = 1500;
 
-chunkLoadedSet = ds_map_create(); //used in chunkLoaded()
+chunkLoadedSet = ds_map_create(); //used to check if a postition is loaded
 
-chunkMap = ds_map_create();
+chunkMap = ds_map_create(); //used to check if a postition is loaded and what its value is (the full map)
+
+fileSave = "MapSave"
+if file_exists(fileSave) {
+		chunkMap = ds_map_secure_load(fileSave);
+}
