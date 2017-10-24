@@ -17,6 +17,7 @@ for(var i = 0; i < numSizeBlocks; i++) {
 deep = ds_grid_write(deep);
 ds_map_replace(chunkMap,getKey(px,py),deep);
 */
+
 if(ds_map_exists(chunkMap,getKey(x,y))){
     var str = ds_map_find_value(chunkMap,getKey(x,y));
     ds_grid_read(chunkGrid,str);
