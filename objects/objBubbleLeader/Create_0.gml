@@ -2,7 +2,7 @@
 event_inherited();
 npcMaxHealth = 3000;
 
-alarm[2] = 1;
+alarm[0] = 1;
 tribeMissing = 0;
 
 tribeSize = random_range(2,4);

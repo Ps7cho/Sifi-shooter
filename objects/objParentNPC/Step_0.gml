@@ -24,8 +24,8 @@ if isTargeted {
 			moveme( min(move_speed_this_frame, distanceToTarget),direct);
 		}else{
 			moveme(0,dir);
-			if primaryWeapon.weaponCanFire{
-				fireWeapon(primaryWeapon, attackingTarget);
+			if ds_map_find_value(primaryWeapon, global.WEAPON_CAN_FIRE_KEY) {
+				fireWeapon(id, primaryWeapon, attackingTarget);
 			}
 		}
 	}else{
@@ -43,8 +43,8 @@ if isTargeted {
 		moveme( min(move_speed_this_frame, distanceToTarget),direct);
 	}else{
 		moveme(0,dir);
-		if primaryWeapon.weaponCanFire{
-			fireWeapon(primaryWeapon, attackingTarget);
+		if ds_map_find_value(primaryWeapon, global.WEAPON_CAN_FIRE_KEY) {
+			fireWeapon(id, primaryWeapon, attackingTarget);
 		}
 	}
 }else{

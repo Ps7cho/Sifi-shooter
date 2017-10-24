@@ -33,8 +33,9 @@ var newBaseDamage = ds_map_find_value(weaponCharacteristics, global.WEAPON_DAMAG
 ds_map_set(weaponCharacteristics, global.WEAPON_DAMAGE_KEY, round(newBaseDamage));
 
 // ------------------------------------------------------------
-// USE WITH CURRENT IMPLENTATION / ONLY FOR DEBUG!!!
+// USE THIS WHEN RETURNING AN OBJECT
 // ------------------------------------------------------------
+/*
 if weaponType == primaryWeapons.pistol { 
 	var weaponObj = instance_create_layer(0,0,"Instances",objPistol);
 	weaponObj.weaponDamage = ds_map_find_value(weaponCharacteristics, global.WEAPON_DAMAGE_KEY);
@@ -44,9 +45,10 @@ if weaponType == primaryWeapons.pistol {
 	weaponObj.weaponDamage = ds_map_find_value(weaponCharacteristics, global.WEAPON_DAMAGE_KEY);
 	return weaponObj;
 }
+*/
 
 
 // ------------------------------------------------------------
-// USE THIS WHEN RETURNING JUST A MAP
-// return weaponCharacteristics;
+// USE THIS WHEN RETURNING A MAP
 // ------------------------------------------------------------
+return weaponCharacteristics;
