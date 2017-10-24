@@ -90,8 +90,8 @@ switch playerState {
 			var distanceToTarget = point_distance(x, y, attackingTarget.x, attackingTarget.y);
 			if distanceToTarget <= shootRange {
 				// Attack	
-				if playerPrimaryWeapon.weaponCanFire {
-					fireWeapon(playerPrimaryWeapon, attackingTarget);
+				if ds_map_find_value(playerPrimaryWeapon, global.WEAPON_CAN_FIRE_KEY) {
+					fireWeapon(id, playerPrimaryWeapon, attackingTarget);
 				}
 			} else {
 				// Begin movement toward the enemy again

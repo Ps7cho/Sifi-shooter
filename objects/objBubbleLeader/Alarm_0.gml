@@ -5,4 +5,4 @@ if tribeMissing > 0{
 	bubble.tribe = id;
 	tribeMissing--;
 }
-alarm[2] = 20*room_speed;
+alarm[0] = 20*room_speed;

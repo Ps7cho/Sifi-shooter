@@ -34,6 +34,10 @@ global.WEAPON_RELOAD_SOUND_KEY = "WEAPON_RELOAD_SOUND_KEY";
 global.WEAPON_HIT_SOUND_KEY = "WEAPON_HIT_SOUND_KEY";
 global.WEAPON_HIT_DELAY_KEY = "WEAPON_HIT_DELAY_KEY";
 
+global.WEAPON_ROUNDS_KEY = "WEAPON_ROUNDS_KEY";
+global.WEAPON_CLIP_ROUNDS_KEY = "WEAPON_CLIP_ROUNDS_KEY";
+global.WEAPON_CAN_FIRE_KEY = "WEAPON_CAN_FIRE_KEY";
+
 
 var basePistol = ds_map_create();
 ds_map_add(basePistol, global.WEAPON_TYPE_KEY, primaryWeapons.pistol);
@@ -49,6 +53,9 @@ ds_map_add(basePistol, global.WEAPON_SHOOT_SOUND_KEY, soundLaser1);
 ds_map_add(basePistol, global.WEAPON_RELOAD_SOUND_KEY, soundReload1);
 ds_map_add(basePistol, global.WEAPON_HIT_SOUND_KEY, soundHit);
 ds_map_add(basePistol, global.WEAPON_HIT_DELAY_KEY, 20);
+ds_map_add(basePistol, global.WEAPON_ROUNDS_KEY, 48);
+ds_map_add(basePistol, global.WEAPON_CLIP_ROUNDS_KEY, 12);
+ds_map_add(basePistol, global.WEAPON_CAN_FIRE_KEY, true);
 
 var baseRifle = ds_map_create();
 ds_map_add(baseRifle, global.WEAPON_TYPE_KEY, primaryWeapons.rifle);
@@ -56,14 +63,17 @@ ds_map_add(baseRifle, global.WEAPON_TIER_KEY, WeaponTiers.common);
 ds_map_add(baseRifle, global.WEAPON_ACCURACY_KEY, 0.85);
 ds_map_add(baseRifle, global.WEAPON_DAMAGE_KEY, 100);
 ds_map_add(baseRifle, global.WEAPON_RANGE_KEY, 300);
-ds_map_add(baseRifle, global.WEAPON_FIRE_RATE_KEY, 60);
-ds_map_add(baseRifle, global.WEAPON_CLIP_SIZE_KEY, 12);
+ds_map_add(baseRifle, global.WEAPON_FIRE_RATE_KEY, 10);
+ds_map_add(baseRifle, global.WEAPON_CLIP_SIZE_KEY, 30);
 ds_map_add(baseRifle, global.WEAPON_RELOAD_SPEED_KEY, 120);
 ds_map_add(baseRifle, global.WEAPON_TITLE_KEY, "Rifle");
 ds_map_add(baseRifle, global.WEAPON_SHOOT_SOUND_KEY, soundLaser1);
 ds_map_add(baseRifle, global.WEAPON_RELOAD_SOUND_KEY, soundReload1);
 ds_map_add(baseRifle, global.WEAPON_HIT_SOUND_KEY, soundHit);
 ds_map_add(baseRifle, global.WEAPON_HIT_DELAY_KEY, 20);
+ds_map_add(baseRifle, global.WEAPON_ROUNDS_KEY, 90);
+ds_map_add(baseRifle, global.WEAPON_CLIP_ROUNDS_KEY, 30);
+ds_map_add(baseRifle, global.WEAPON_CAN_FIRE_KEY, true);
 
 
 // Add weapon templates to global weapon list

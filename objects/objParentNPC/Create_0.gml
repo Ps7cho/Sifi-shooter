@@ -11,8 +11,8 @@ y_offset = sprite_get_yoffset(mask_index);
 
 alarm[1] = 1;
 
-primaryWeapon = instance_create_layer(x,y,"Instances",objPistol);
-shootRange = primaryWeapon.weaponRange;
+primaryWeapon = generateWeapon(primaryWeapons.pistol, WeaponTiers.common);
+shootRange = ds_map_find_value(primaryWeapon, global.WEAPON_RANGE_KEY);
 isTargeted = false;
 attackingTarget = noone;
 

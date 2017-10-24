@@ -14,7 +14,7 @@ ds_list_add(playerWeaponList, generateWeapon(primaryWeapons.pistol, WeaponTiers.
 
 playerPrimaryWeapon = ds_list_find_value(playerWeaponList, 0);
 
-shootRange = playerPrimaryWeapon.weaponRange;
+shootRange = ds_map_find_value(playerPrimaryWeapon, global.WEAPON_RANGE_KEY);
 
 
 
